@@ -1,4 +1,7 @@
+import { useState } from "react";
+import GameSetup from "../../components/GameSetup";
 import type { Route } from "./+types/home";
+import type { Level } from "../../configs/game.config";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -12,5 +15,11 @@ export function meta({}: Route.MetaArgs) {
 }
 
 export default function Home() {
-  return <div>بازی کارت حافظه</div>;
+  const [level, setLevel] = useState<Level | null>(null);
+
+  return (
+    <div>
+      <GameSetup onStart={setLevel} />
+    </div>
+  );
 }
