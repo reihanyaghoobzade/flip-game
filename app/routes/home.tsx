@@ -1,13 +1,16 @@
 import type { Route } from "./+types/home";
-import { Welcome } from "../welcome/welcome";
 
 export function meta({}: Route.MetaArgs) {
   return [
-    { title: "New React Router App" },
-    { name: "description", content: "Welcome to React Router!" },
+    { title: "Flip Game" },
+    {
+      name: "description",
+      content:
+        "Challenge your memory with this fun card matching game. Flip cards, find matching pairs, improve concentration, and beat your best score.",
+    },
   ];
 }
 
 export default function Home() {
-  return <Welcome />;
+  return <div>بازی کارت حافظه</div>;
 }
