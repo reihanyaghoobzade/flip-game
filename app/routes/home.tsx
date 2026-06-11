@@ -1,7 +1,8 @@
 import { useState } from "react";
-import GameSetup from "../../components/GameSetup";
+import Setup from "../../components/FlipGame/Setup";
 import type { Route } from "./+types/home";
 import type { Level } from "../../configs/game.config";
+import FlipGame from "../../components/FlipGame";
 
 export function meta({}: Route.MetaArgs) {
   return [
@@ -17,9 +18,9 @@ export function meta({}: Route.MetaArgs) {
 export default function Home() {
   const [level, setLevel] = useState<Level | null>(null);
 
-  return (
-    <div>
-      <GameSetup onStart={setLevel} />
-    </div>
-  );
+  if (!level) {
+    return <Setup onStart={setLevel} />;
+  }
+
+  return <FlipGame level={level} onChangeLevel={() => setLevel(null)} />;
 }

@@ -1,9 +1,9 @@
-export default function IconMoves() {
+export default function IconMoves({size = 24} : {size?: number}) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width={size}
+      height={size}
       viewBox="0 0 48 48"
       fill="none"
       aria-hidden="true"

@@ -1,10 +1,10 @@
-import { LEVELS, type Level } from "../configs/game.config";
-import IconClock from "./icons/IconClock";
-import IconGrid from "./icons/IconGrid";
-import IconLevelEasy from "./icons/IconLevelEasy";
-import IconLevelHard from "./icons/IconLevelHard";
-import IconLevelMedium from "./icons/IconLevelMedium";
-import IconMoves from "./icons/IconMoves";
+import { LEVELS, type Level } from "../../configs/game.config";
+import IconClock from "../icons/IconClock";
+import IconGrid from "../icons/IconGrid";
+import IconLevelEasy from "../icons/IconLevelEasy";
+import IconLevelHard from "../icons/IconLevelHard";
+import IconLevelMedium from "../icons/IconLevelMedium";
+import IconMoves from "../icons/IconMoves";
 
 type Props = {
   onStart: (level: Level) => void;

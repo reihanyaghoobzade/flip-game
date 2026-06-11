@@ -2,8 +2,8 @@ export default function IconGrid() {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="18"
-      height="18"
+      width="20"
+      height="20"
       viewBox="0 0 48 48"
       fill="none"
       aria-hidden="true"

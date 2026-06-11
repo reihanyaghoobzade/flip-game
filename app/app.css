@@ -1,11 +1,17 @@
 @import "tailwindcss";
 
+@layer utilities {
+  .ltr {
+    direction: ltr;
+  }
+}
+
 @theme {
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif,
+  --font-vazir: "Vazirmatn", ui-sans-serif, system-ui, sans-serif,
     "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
 }
 
 html,
 body {
-  @apply bg-white;
+  @apply bg-white font-vazir;
 }
