@@ -1,87 +1,96 @@
-# Welcome to React Router!
+# 🃏 Flip Game
 
-A modern, production-ready template for building full-stack React applications using React Router.
+یک بازی حافظه‌ای سریع و سرگرم‌کننده که باید کارت‌های مشابه را پیدا کنید، قبل از اینکه زمان به پایان برسد!
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/remix-run/react-router-templates/tree/main/default)
+## 🎮 درباره بازی
 
-## Features
+Flip Game یک بازی کلاسیک Memory Matching است که در آن بازیکن باید با برگرداندن کارت‌ها، جفت‌های مشابه را پیدا کند. هرچه سریع‌تر و با حرکت‌های کمتر بازی را تمام کنید، امتیاز بهتری خواهید داشت.
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+---
 
-## Getting Started
+## ✨ امکانات
 
-### Installation
+- 🧠 گیم‌پلی حافظه‌ای جذاب
+- 🎯 سه سطح سختی مختلف
+- ⏱ تایمر شمارش معکوس
+- 👣 نمایش تعداد حرکت‌ها
+- 🏆 صفحه برد و باخت
+- 🔀 چینش تصادفی کارت‌ها در هر بازی
+- 📱 رابط کاربری واکنش‌گرا برای موبایل و دسکتاپ
+- ⚡ ساخته شده با React و TypeScript
 
-Install the dependencies:
+---
+
+## 🎲 نحوه بازی
+
+1. سطح سختی موردنظر را انتخاب کنید.
+2. روی کارت‌ها کلیک کنید تا برگردند.
+3. دو کارت مشابه را پیدا کنید.
+4. تمام جفت‌ها را قبل از اتمام زمان پیدا کنید.
+5. با کمترین تعداد حرکت رکورد خود را بهبود دهید.
+
+---
+
+## 🕹 سطوح بازی
+
+| سطح | تعداد کارت‌ها | چالش |
+|-------|-------------|--------|
+| آسان | کم | مناسب شروع |
+| متوسط | بیشتر | نیازمند تمرکز |
+| سخت | بیشترین تعداد | مخصوص حرفه‌ای‌ها |
+
+---
+
+## 🚀 اجرا در محیط توسعه
+
+ابتدا وابستگی‌ها را نصب کنید:
 
 ```bash
 npm install
 ```
 
-### Development
-
-Start the development server with HMR:
+سپس پروژه را اجرا کنید:
 
 ```bash
 npm run dev
 ```
 
-Your application will be available at `http://localhost:5173`.
+آدرس اجرای پروژه:
 
-## Building for Production
+```text
+http://localhost:5173
+```
 
-Create a production build:
+---
+
+## 📦 ساخت نسخه نهایی
 
 ```bash
 npm run build
 ```
 
-## Deployment
-
-### Docker Deployment
-
-To build and run using Docker:
+برای اجرای نسخه Build شده:
 
 ```bash
-docker build -t my-app .
-
-# Run the container
-docker run -p 3000:3000 my-app
+npm start
 ```
-
-The containerized application can be deployed to any platform that supports Docker, including:
-
-- AWS ECS
-- Google Cloud Run
-- Azure Container Apps
-- Digital Ocean App Platform
-- Fly.io
-- Railway
-
-### DIY Deployment
-
-If you're familiar with deploying Node applications, the built-in app server is production-ready.
-
-Make sure to deploy the output of `npm run build`
-
-```
-├── package.json
-├── package-lock.json (or pnpm-lock.yaml, or bun.lockb)
-├── build/
-│   ├── client/    # Static assets
-│   └── server/    # Server-side code
-```
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
 ---
 
-Built with ❤️ using React Router.
+## 🛠 تکنولوژی‌های استفاده‌شده
+
+- React
+- TypeScript
+- React Router
+- Vite
+- CSS
+
+---
+
+## 📸 هدف بازی
+
+این بازی علاوه بر سرگرمی، به تقویت حافظه، افزایش تمرکز و بهبود سرعت تصمیم‌گیری کمک می‌کند.
+
+---
+
+### Have fun and beat your own record! 🎉🃏
