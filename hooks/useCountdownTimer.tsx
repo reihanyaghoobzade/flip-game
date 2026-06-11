@@ -20,7 +20,7 @@ export default function useCountdownTimer(
         return prev - 1;
       });
     }, 1000);
-  }, []);
+  }, [onFinish]);
 
   const stop = useCallback(() => {
     clearInterval(intervalRef.current!);
