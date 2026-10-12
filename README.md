@@ -1,96 +1,59 @@
 # 🃏 Flip Game
 
-یک بازی حافظه‌ای سریع و سرگرم‌کننده که باید کارت‌های مشابه را پیدا کنید، قبل از اینکه زمان به پایان برسد!
+A memory-matching card game built with **React 19, TypeScript, and React Router 7** — three difficulty levels, a countdown timer, and a move counter, with the game logic fully extracted into testable custom hooks.
 
-## 🎮 درباره بازی
+## Gameplay
 
-Flip Game یک بازی کلاسیک Memory Matching است که در آن بازیکن باید با برگرداندن کارت‌ها، جفت‌های مشابه را پیدا کند. هرچه سریع‌تر و با حرکت‌های کمتر بازی را تمام کنید، امتیاز بهتری خواهید داشت.
+Choose a level, flip the cards, and find all matching pairs before the timer runs out. Fewer moves = better score.
 
----
+| Level | Grid | Moves | Time |
+|---------|------|-------|------|
+| Easy | 4×4 | 40 | 120s |
+| Medium | 6×6 | 40 | 120s |
+| Hard | 8×8 | 60 | 120s |
 
-## ✨ امکانات
+## Architecture
 
-- 🧠 گیم‌پلی حافظه‌ای جذاب
-- 🎯 سه سطح سختی مختلف
-- ⏱ تایمر شمارش معکوس
-- 👣 نمایش تعداد حرکت‌ها
-- 🏆 صفحه برد و باخت
-- 🔀 چینش تصادفی کارت‌ها در هر بازی
-- 📱 رابط کاربری واکنش‌گرا برای موبایل و دسکتاپ
-- ⚡ ساخته شده با React و TypeScript
+Game state lives in composable custom hooks, keeping components purely presentational:
 
----
+```
+components/FlipGame/
+├── index.tsx               # composition + layout
+├── FlipCard.tsx            # single card (flip / match animations)
+├── StatusBar.tsx           # timer + move counter
+└── GameResult.tsx          # win / lose screen
 
-## 🎲 نحوه بازی
+hooks/
+├── useFlipGame.tsx         # game state machine (preview, lock, match, restart)
+├── useCardInteractions.tsx # card click rules
+├── useCountdownTimer.tsx   # timer logic
+└── __tests__/              # unit tests for the hook logic
+```
 
-1. سطح سختی موردنظر را انتخاب کنید.
-2. روی کارت‌ها کلیک کنید تا برگردند.
-3. دو کارت مشابه را پیدا کنید.
-4. تمام جفت‌ها را قبل از اتمام زمان پیدا کنید.
-5. با کمترین تعداد حرکت رکورد خود را بهبود دهید.
+## Tech Stack
 
----
+- **React 19** + **React Router 7** (framework mode)
+- **TypeScript** — typed game config, cards, and level system
+- **Tailwind CSS 4** — responsive layout for mobile & desktop
+- **Vitest** + **Testing Library** — unit tests for hook logic
+- **Docker** — production image included (`Dockerfile`)
 
-## 🕹 سطوح بازی
-
-| سطح | تعداد کارت‌ها | چالش |
-|-------|-------------|--------|
-| آسان | کم | مناسب شروع |
-| متوسط | بیشتر | نیازمند تمرکز |
-| سخت | بیشترین تعداد | مخصوص حرفه‌ای‌ها |
-
----
-
-## 🚀 اجرا در محیط توسعه
-
-ابتدا وابستگی‌ها را نصب کنید:
+## Getting Started
 
 ```bash
 npm install
+npm run dev        # http://localhost:5173
 ```
-
-سپس پروژه را اجرا کنید:
 
 ```bash
-npm run dev
+npm test           # run unit tests
+npm run build      # production build
+npm start          # serve the production build
 ```
 
-آدرس اجرای پروژه:
-
-```text
-http://localhost:5173
-```
-
----
-
-## 📦 ساخت نسخه نهایی
+Docker:
 
 ```bash
-npm run build
+docker build -t flip-game .
+docker run -p 3000:3000 flip-game
 ```
-
-برای اجرای نسخه Build شده:
-
-```bash
-npm start
-```
-
----
-
-## 🛠 تکنولوژی‌های استفاده‌شده
-
-- React
-- TypeScript
-- React Router
-- Vite
-- CSS
-
----
-
-## 📸 هدف بازی
-
-این بازی علاوه بر سرگرمی، به تقویت حافظه، افزایش تمرکز و بهبود سرعت تصمیم‌گیری کمک می‌کند.
-
----
-
-### Have fun and beat your own record! 🎉🃏
